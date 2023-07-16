@@ -10,8 +10,14 @@ app.use(cors());
 app.use("/auth", userRouter);
 
 
-mongoose.connect("mongodb+srv://admin:admin8390@recipe.lmagwiq.mongodb.net/");
+const connect = mongoose.connect("mongodb+srv://admin:admin8390@recipe.lmagwiq.mongodb.net/");
 
+if(connect) {
+    console.log("DB connection successfull");
+}
+else{
+    throw new Error("DB game");
+}
 app.listen(3001, () => {
     console.log("SERVER STARTED !");
 });
