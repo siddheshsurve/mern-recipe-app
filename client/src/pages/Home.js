@@ -50,7 +50,7 @@ export const Home = () => {
   return (
     <div>
       <h1>Recipes</h1>
-      <ul>
+      <ul className="recipe-block">
         {recipes.map((recipe) => (
           <li key={recipe._id}>
             <div>
