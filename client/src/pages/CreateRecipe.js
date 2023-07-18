@@ -30,12 +30,15 @@ const CreateRecipe = () => {
     const ingredients = [...recipe.ingredients];
     ingredients[index] = value;
     setRecipe({ ...recipe, ingredients });
+
   };
 
   const handleAddIngredient = () => {
     const ingredients = [...recipe.ingredients, ""];
     setRecipe({ ...recipe, ingredients });
   };
+
+  console.log(recipe);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
