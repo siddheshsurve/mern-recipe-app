@@ -29,6 +29,11 @@ const recipeSchema = mongoose.Schema({
     ref: "users",
     required: true,
   },
+  // ownerName : {
+  //   type : mongoose.Schema.Types.String,
+  //   ref: "users",
+  //   required: true,
+  // }
 });
 
 export const RecipesModel = mongoose.model("Recipes", recipeSchema);

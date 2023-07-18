@@ -26,6 +26,7 @@ router.post("/",  verifyToken, async (req, res) => {
         imageUrl: req.body.imageUrl,
         cookingTime: req.body.cookingTime,
         userOwner: req.body.userOwner,
+        // ownerName: req.body.ownerName
       });
       console.log(recipe);
 

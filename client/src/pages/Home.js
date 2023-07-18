@@ -67,6 +67,7 @@ export const Home = () => {
             </div>
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
+            {/* <p>Uploaded by : {recipe.ownerName}</p> */}
           </li>
         ))}
       </ul>
