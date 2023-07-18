@@ -13,7 +13,13 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipeRouter);
 
 
-const connect = mongoose.connect("mongodb+srv://admin:admin8390@recipe.lmagwiq.mongodb.net/recipes");
+const connect = mongoose.connect(
+        "mongodb+srv://admin:admin8390@recipe.lmagwiq.mongodb.net/recipes",
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+    );
 
 if(connect) {
     console.log("DB connection successfull");
