@@ -38,7 +38,7 @@ export const Home = () => {
       const response = await axios.put("http://localhost:3001/recipes", {
         recipeID,
         userID,
-      });
+      }); 
       setSavedRecipes(response.data.savedRecipes);
     } catch (err) {
       console.log(err);
