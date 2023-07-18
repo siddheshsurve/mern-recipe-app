@@ -32,7 +32,7 @@ export const Home = () => {
 
     fetchRecipes();
     fetchSavedRecipes();
-  }, []);
+  },);
 
   const saveRecipe = async (recipeID) => {
     try {
