@@ -1,0 +1,15 @@
+.recipe-block {
+    /* background-color: #e8e8e8; */
+    background: #FFFAD7;
+    margin-bottom: 30px;
+    font-family: cursive;
+    border-radius: 20px;
+    box-shadow: rgba(30, 30, 33, 0.25) 0px 5px 5px -4px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -25px inset;
+    padding: 7px;
+  } 
+
+img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}

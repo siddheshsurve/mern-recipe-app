@@ -26,6 +26,7 @@ const SavedRecipe = () => {
       <h1>Saved Recipes</h1>
       <ul>
         {savedRecipes.map((recipe) => (
+          <div className="recipe-block">
           <li key={recipe._id}>
             <div>
               <h2>{recipe.name}</h2>
@@ -34,6 +35,7 @@ const SavedRecipe = () => {
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
           </li>
+          </div>
         ))}
       </ul>
     </div>

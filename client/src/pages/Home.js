@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
+import "./HomeStyle.css"
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -50,12 +51,14 @@ export const Home = () => {
   return (
     <div>
       <h1>Recipes</h1>
-      <ul className="recipe-block">
+      
+      <ul>
         {recipes.map((recipe) => (
+          <div className="recipe-block">
           <li key={recipe._id}>
             <div>
               <h2>{recipe.name}</h2>
-              <button
+              <button className="save-button"
                 onClick={() => saveRecipe(recipe._id)}
                 disabled={isRecipeSaved(recipe._id)}
               >
@@ -69,8 +72,10 @@ export const Home = () => {
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
             {/* <p>Uploaded by : {recipe.ownerName}</p> */}
           </li>
+          </div>
         ))}
       </ul>
+      
     </div>
   )
 }
