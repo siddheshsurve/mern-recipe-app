@@ -30,7 +30,7 @@ const SavedRecipe = () => {
             <div>
               <h2>{recipe.name}</h2>
             </div>
-            <p>{recipe.description}</p>
+            <p>{recipe.instructions}</p>
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
           </li>
