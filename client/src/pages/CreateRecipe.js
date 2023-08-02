@@ -10,7 +10,7 @@ const CreateRecipe = () => {
   const [cookies, ] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
     name: "",
-    description: "",
+    // description: "",
     ingredients: [],
     instructions: "",
     imageUrl: "",
@@ -70,13 +70,13 @@ const CreateRecipe = () => {
           value={recipe.name}
           onChange={handleChange}
         />
-        <label htmlFor="description">Description</label>
+        {/* <label htmlFor="description">Description</label>
         <textarea
           id="description"
           name="description"
           value={recipe.description}
           onChange={handleChange}
-        ></textarea>
+        ></textarea> */}
         <label htmlFor="ingredients">Ingredients</label>
         {recipe.ingredients.map((ingredient, index) => (
           <input

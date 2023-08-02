@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 import "./HomeStyle.css"
+import "../App.css"
+
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -48,6 +50,8 @@ export const Home = () => {
 
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
+  
+
   return (
     <div>
       <h1>Recipes</h1>
@@ -65,12 +69,23 @@ export const Home = () => {
                 {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
               </button>
             </div>
+            <div className="ingredients">
+              <h4>Ingredients</h4>
+              <ol>
+                {(recipe.ingredients).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+             </ol>
+            </div>
+            
             <div className="instructions">
-              <p>{recipe.instructions}</p>
+              <p><b>Instructions : </b>{recipe.instructions}</p>
             </div>
             <img src={recipe.imageUrl} alt={recipe.name} />
-            <p>Cooking Time: {recipe.cookingTime} minutes</p>
+            <p><b>Cooking Time : </b> {recipe.cookingTime} minutes</p>
             {/* <p>Uploaded by : {recipe.ownerName}</p> */}
+            {/* <p>Ingredient : {recipe.ingredients}</p> */}
+            
           </li>
           </div>
         ))}
