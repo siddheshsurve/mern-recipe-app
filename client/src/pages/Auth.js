@@ -37,7 +37,6 @@ const Login = () => {
       console.error(error);
     }
   };
-
   return (
     <div className="auth-container">
       <form onSubmit={handleSubmit}>
@@ -113,5 +112,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Auth;

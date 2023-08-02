@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 const CreateRecipe = () => {
-
+  
   const userID = useGetUserID();
   const [cookies, ] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
@@ -17,6 +17,7 @@ const CreateRecipe = () => {
     cookingTime: 0,
     userOwner: userID,
   });
+
 
   const navigate = useNavigate();
 
@@ -57,6 +58,7 @@ const CreateRecipe = () => {
       console.error(error);
     }
   };
+
 
   return (
     <div className='create-recipe'>
